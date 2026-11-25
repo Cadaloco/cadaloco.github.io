@@ -688,7 +688,7 @@ p {
 }
 
 .regalos-home {
-  padding: 3.2rem 0 0;
+  padding: 3.2rem 0 4.2rem;
   overflow: hidden;
 }
 
@@ -696,7 +696,7 @@ p {
   width: auto;
   max-width: none;
   margin: 0;
-  padding-left: var(--page);
+  padding-left: calc(var(--page) * 1.5);
   display: grid;
   grid-template-columns: minmax(16rem, 28rem) 1fr;
   gap: 0.5rem;
@@ -717,11 +717,11 @@ p {
 .gift-frame::before {
   content: "";
   position: absolute;
-  left: -6rem;
+  left: -4.2rem;
   top: 50%;
   z-index: 0;
-  width: 22rem;
-  height: 22rem;
+  width: 15.5rem;
+  height: 15.5rem;
   border-radius: 50%;
   background: var(--orange);
   transform: translateY(-50%);
@@ -1159,7 +1159,7 @@ button[type="submit"]:hover {
   }
 
   .regalos-home .wrap {
-    padding-right: var(--page);
+    padding-right: calc(var(--page) * 1.5);
   }
 
   .gift-frame img {
