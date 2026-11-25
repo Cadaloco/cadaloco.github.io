@@ -599,11 +599,12 @@ p {
   transform: rotate(-12deg);
 }
 
-.stamp {
+.polaroid img.stamp {
   width: 7.4rem;
   height: 7.4rem;
   flex: none;
   object-fit: contain;
+  object-position: center;
   filter: drop-shadow(0 6px 10px rgba(43, 23, 16, 0.16));
 }
 
