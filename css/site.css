@@ -698,8 +698,9 @@ p {
   margin: 0;
   padding-left: calc(var(--page) * 1.5);
   display: grid;
-  grid-template-columns: minmax(16rem, 28rem) 1fr;
-  gap: 0.5rem;
+  grid-template-columns: minmax(22rem, 36rem) minmax(0, 44rem);
+  justify-content: space-between;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -711,17 +712,20 @@ p {
 
 .gift-frame {
   position: relative;
+  width: 100%;
+  max-width: 44rem;
   min-height: 24rem;
+  justify-self: end;
 }
 
 .gift-frame::before {
   content: "";
   position: absolute;
-  left: -4.2rem;
+  left: -6rem;
   top: 50%;
   z-index: 0;
-  width: 15.5rem;
-  height: 15.5rem;
+  width: 22rem;
+  height: 22rem;
   border-radius: 50%;
   background: var(--orange);
   transform: translateY(-50%);
