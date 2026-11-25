@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cotizar | Cada Loco con su Tema</title>
+    <meta
+      name="description"
+      content="Cotiza café, regalos, una estación o una experiencia con Cada Loco con su Tema. Claudia en Bogotá y Daniel en Pereira."
+    />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,650;1,9..144,560&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/site.css?v=59" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Cada Loco con su Tema, inicio">
+        <img src="assets/logo-mark.png" alt="" width="739" height="512" />
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" data-nav-toggle>
+        Menú
+      </button>
+      <nav class="nav" id="menu" data-nav>
+        <a href="proveeduria.html">Café</a>
+        <a href="regalos.html">Regalos</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="cafe.html">Nuestra historia</a>
+        <a class="btn" href="cotizar.html" aria-current="page">Solicitar cotización →</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <header class="quote-hero">
+        <div class="wrap">
+          <p class="eyebrow">Cotizar</p>
+          <h1>Cuéntanos tu idea</h1>
+          <p>
+            Diseñamos una propuesta a la medida, ya sea de café, regalos,
+            eventos o experiencias. Completa el formulario y nos pondremos en
+            contacto contigo muy pronto.
+          </p>
+        </div>
+      </header>
+
+      <section class="wrap quote-grid">
+        <form class="quote-form" data-order>
+          <label>
+            <span>Nombre <span class="req">*</span></span>
+            <input name="nombre" required autocomplete="name" />
+          </label>
+          <label>
+            Organización
+            <input name="organizacion" autocomplete="organization" />
+          </label>
+          <label>
+            <span>¿Qué necesitas? <span class="req">*</span></span>
+            <select name="linea" required>
+              <option>Proveeduría de café</option>
+              <option>Regalos con sentido</option>
+              <option>Estación para un evento</option>
+              <option>Experiencia o Café de Autor</option>
+              <option>Visita a la casa</option>
+              <option>Un regalo a la medida</option>
+            </select>
+          </label>
+          <label>
+            Cantidad o número de personas
+            <input name="cantidad" inputmode="numeric" />
+          </label>
+          <label>
+            Ciudad de entrega
+            <input name="ciudad" autocomplete="address-level2" />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" placeholder="Cuéntanos más detalles: fecha, lugar, si el regalo lleva logo, referencias o ideas que tengas."></textarea>
+          </label>
+          <button type="submit">Enviar solicitud de cotización →</button>
+        </form>
+
+        <aside class="quote-side">
+          <article class="quote-card">
+            <h2>Hablemos directamente</h2>
+            <div class="place">
+              <h3>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+                Bogotá
+              </h3>
+              <p class="who">Claudia Patricia Fernández</p>
+              <p class="role">Gerencia</p>
+              <p class="reach">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5h2.2l1.2 3-1.6 1a12 12 0 0 0 5.2 5.2l1-1.6 3 1.2V16a2 2 0 0 1-2.2 2A14.5 14.5 0 0 1 6 7.7 2 2 0 0 1 8 5.5z"/></svg>
+                <a href="tel:+573138527043">313 852 7043</a>
+              </p>
+              <p class="reach">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg>
+                <a href="mailto:casasehistorias@gmail.com">casasehistorias@gmail.com</a>
+              </p>
+            </div>
+            <div class="place">
+              <h3>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+                Pereira
+              </h3>
+              <p class="who">Daniel Ramírez</p>
+              <p class="role">Jefe de producto</p>
+              <p class="reach">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5h2.2l1.2 3-1.6 1a12 12 0 0 0 5.2 5.2l1-1.6 3 1.2V16a2 2 0 0 1-2.2 2A14.5 14.5 0 0 1 6 7.7 2 2 0 0 1 8 5.5z"/></svg>
+                <a href="tel:+573102565789">310 256 5789</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="quote-notes">
+            <ul class="terms">
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="11" rx="7" ry="3"/><path d="M9 11v4.2c0 1.6 3.1 3 7 3s7-1.4 7-3V11"/><path d="M9 15.2v4.2c0 1.6 3.1 3 7 3s7-1.4 7-3v-4.2"/></svg>
+                <div>
+                  <strong>Anticipo</strong>
+                  <p>El anticipo es del 50%.</p>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 6.5h9l5 5V25a1.5 1.5 0 0 1-1.5 1.5h-12.5A1.5 1.5 0 0 1 8.5 25V8A1.5 1.5 0 0 1 10 6.5z"/><path d="M18.5 6.8V12H24M12 17h8M12 21h6"/></svg>
+                <div>
+                  <strong>Factura</strong>
+                  <p>Toda compra lleva factura electrónica.</p>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="8"/><path d="M16 11.5V16l3 2"/></svg>
+                <div>
+                  <strong>Respuesta</strong>
+                  <p>Te contactamos en máximo 24–48 horas.</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+          <svg class="quote-branch" viewBox="0 0 260 180" aria-hidden="true">
+            <path d="M248 168c-28-18-52-22-78-48-18-18-24-42-22-68" fill="none" stroke="#3f6b34" stroke-width="3" stroke-linecap="round"/>
+            <path d="M150 58c-28-34-72-28-86 6 28 6 58 8 86-6z" fill="#5d9a45"/>
+            <path d="M168 96c34-28 70-8 62 28-28 2-48-4-62-28z" fill="#3e7a38"/>
+            <path d="M188 78c18-26 52-22 58 4-22 8-42 6-58-4z" fill="#6aaa4e"/>
+            <circle cx="176" cy="52" r="13" fill="#d64532"/>
+            <circle cx="196" cy="64" r="12" fill="#c43222"/>
+            <circle cx="184" cy="78" r="11" fill="#e25532"/>
+            <circle cx="208" cy="84" r="8" fill="#b92c1e"/>
+          </svg>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <a class="brand" href="index.html">
+          <img src="assets/logo-mark-light.png" alt="Cada Loco con su Tema" width="739" height="512" />
+        </a>
+        <nav class="footer-nav" aria-label="Pie de página">
+          <a href="proveeduria.html">Café</a>
+          <a href="regalos.html">Regalos</a>
+          <a href="eventos.html">Eventos</a>
+          <a href="experiencias.html">Experiencias</a>
+          <a href="cafe.html">Nuestra historia</a>
+        </nav>
+        <div class="social">
+          <a href="https://instagram.com/cadaloco.co" aria-label="Instagram">Ig</a>
+          <a href="https://facebook.com/cadaloco.co" aria-label="Facebook">Fb</a>
+          <a href="https://wa.me/573138527043" aria-label="WhatsApp">Wa</a>
+        </div>
+        <p class="footer-note">Café cultural · Colombia</p>
+      </div>
+    </footer>
+    <script src="js/site.js?v=7"></script>
+  </body>
+</html>
