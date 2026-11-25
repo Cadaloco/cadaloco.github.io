@@ -507,8 +507,13 @@ p {
 }
 
 .regalos-home p {
-  max-width: 32rem;
+  max-width: 22rem;
   margin-top: 0.9rem;
+  line-height: 1.45;
+}
+
+.regalos-home .btn {
+  margin-top: 1.25rem;
 }
 
 .more {
@@ -598,6 +603,7 @@ p {
   width: 7.4rem;
   height: 7.4rem;
   flex: none;
+  object-fit: contain;
   filter: drop-shadow(0 6px 10px rgba(43, 23, 16, 0.16));
 }
 
@@ -651,12 +657,12 @@ p {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(250, 241, 230, 0.05) 10%,
-    rgba(250, 241, 230, 0.38) 34%,
-    rgba(250, 241, 230, 0.5) 100%
+    rgba(250, 241, 230, 0.28) 22%,
+    rgba(250, 241, 230, 0.62) 52%,
+    rgba(250, 241, 230, 0.8) 100%
   );
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 24%, #000 76%, transparent);
-  mask-image: linear-gradient(to bottom, transparent, #000 24%, #000 76%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 94%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 94%, transparent);
   pointer-events: none;
 }
 
@@ -699,7 +705,7 @@ p {
 .regalos-home .wrap > div:first-child {
   position: relative;
   z-index: 2;
-  padding-right: 2.5rem;
+  padding-right: 4.5rem;
 }
 
 .gift-frame {
