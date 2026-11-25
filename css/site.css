@@ -698,7 +698,7 @@ p {
   margin: 0;
   padding-left: calc(var(--page) * 1.5);
   display: grid;
-  grid-template-columns: minmax(22rem, 36rem) minmax(0, 44rem);
+  grid-template-columns: minmax(18rem, 24.75rem) minmax(0, calc(44rem * 4 / 3));
   justify-content: space-between;
   gap: 1.5rem;
   align-items: center;
@@ -713,7 +713,7 @@ p {
 .gift-frame {
   position: relative;
   width: 100%;
-  max-width: 44rem;
+  max-width: calc(44rem * 4 / 3);
   min-height: 24rem;
   justify-self: end;
 }
