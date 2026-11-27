@@ -1281,8 +1281,8 @@ button[type="submit"]:hover {
 
   .wave-arc {
     top: auto;
-    bottom: 8.6rem;
-    left: 0;
+    bottom: 4.8rem;
+    left: 3%;
     z-index: 1;
     width: 190%;
     margin-top: 0;
@@ -1296,6 +1296,9 @@ button[type="submit"]:hover {
 
   .origin-photo {
     order: 2;
+    height: 15rem;
+    object-fit: cover;
+    object-position: left center;
   }
 
   .origin-card {
