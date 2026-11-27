@@ -70,13 +70,13 @@
     });
   }
 
-  function copyBlock(el, selector, keep) {
+  function copyBlock(el, selector, keep, start) {
     if (!el) return;
     el.classList.add("motion-copy");
     const nodes = selector ? [...el.querySelectorAll(selector)] : [...el.children];
     nodes.forEach((node, index) => {
       node.classList.add("rise");
-      node.style.setProperty("--rise-i", String(index));
+      node.style.setProperty("--rise-i", String(index + (start || 0)));
     });
     play(el, "is-in", keep);
   }
@@ -88,7 +88,7 @@
     });
   }
 
-  copyBlock(document.querySelector(".hero-copy"));
+  copyBlock(document.querySelector(".hero-copy"), ":scope > p, :scope > .btn", false, 8);
   const hero = document.querySelector(".home-hero");
   if (hero) play(hero, "is-in");
   copyBlock(document.querySelector(".port-head"), ":scope > div > *, :scope > .port-copy");
