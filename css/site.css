@@ -309,22 +309,39 @@ p {
 
 .port-head {
   display: grid;
-  grid-template-columns: 0.92fr 1.08fr;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 2.25rem;
   align-items: center;
-  column-gap: clamp(1.2rem, 3vw, 2.4rem);
+}
+
+.port-head > div {
+  display: contents;
+}
+
+.port-head .eyebrow {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: start;
+  width: max-content;
 }
 
 .port-head h2 {
+  grid-column: 1;
+  grid-row: 2;
+  width: max-content;
   max-width: 13ch;
   font-size: clamp(2.45rem, 3.4vw, 3.25rem);
 }
 
 .port-copy {
   position: relative;
+  grid-column: 2;
+  grid-row: 2;
   justify-self: start;
+  align-self: center;
   max-width: 36rem;
   margin: 0;
-  padding-left: 1.7rem;
+  padding-left: 2.25rem;
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.45;
@@ -1085,6 +1102,18 @@ button[type="submit"]:hover {
 
   .nav a {
     padding: 0.4rem 0;
+  }
+
+  .port-head > div {
+    display: block;
+  }
+
+  .port-head .eyebrow,
+  .port-head h2,
+  .port-copy {
+    grid-column: auto;
+    grid-row: auto;
+    width: auto;
   }
 
   .hero-grid,
