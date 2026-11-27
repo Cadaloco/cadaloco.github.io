@@ -260,7 +260,8 @@ p {
   pointer-events: auto;
 }
 
-.hero-copy::before {
+.hero-copy::before,
+.hero-copy::after {
   content: "";
   margin-top: auto;
 }
@@ -1095,7 +1096,8 @@ button[type="submit"]:hover {
     padding-top: 1.2rem;
   }
 
-  .hero-copy::before {
+  .hero-copy::before,
+  .hero-copy::after {
     content: none;
   }
 
