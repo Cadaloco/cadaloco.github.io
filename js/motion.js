@@ -124,9 +124,7 @@
       });
     }
     if (lead) {
-      const label = lead.textContent.replace(/\s+/g, " ").trim();
-      lead.setAttribute("aria-label", label);
-      fillGlyphs(lead, label, 16);
+      lead.setAttribute("aria-label", lead.textContent.replace(/\s+/g, " ").trim());
     }
     heroCopy.classList.add("motion-copy");
     play(heroCopy, "is-in");
