@@ -15,7 +15,7 @@
       scrollTrigger: {
         trigger: trigger || list[0],
         start,
-        once: true,
+        toggleActions: "restart none none reverse",
       },
     });
   };
@@ -47,7 +47,7 @@
     duration: 0.95,
     ease: "power3.out",
     stagger: 0.13,
-    scrollTrigger: { trigger: ".orbits", start: "top 78%", once: true },
+    scrollTrigger: { trigger: ".orbits", start: "top 78%", toggleActions: "restart none none reverse" },
   });
 
   gsap.from(".orbit img", {
@@ -56,8 +56,7 @@
     ease: "power2.out",
     stagger: 0.13,
     transformOrigin: "center bottom",
-    clearProps: "scale",
-    scrollTrigger: { trigger: ".orbits", start: "top 78%", once: true },
+    scrollTrigger: { trigger: ".orbits", start: "top 78%", toggleActions: "restart none none reverse" },
   });
 
   gsap.from(".orbit .arch-go", {
@@ -67,7 +66,7 @@
     ease: "back.out(2.2)",
     stagger: 0.13,
     delay: 0.28,
-    scrollTrigger: { trigger: ".orbits", start: "top 78%", once: true },
+    scrollTrigger: { trigger: ".orbits", start: "top 78%", toggleActions: "restart none none reverse" },
   });
 
   reveal(".wave-copy > *", { trigger: ".wave-copy", stagger: 0.1, y: 26 });
@@ -88,7 +87,7 @@
       rotation: -2.5,
       duration: 1.1,
       ease: "power3.out",
-      scrollTrigger: { trigger: ".collage", start: "top 80%", once: true },
+      scrollTrigger: { trigger: ".collage", start: "top 80%", toggleActions: "restart none none reverse" },
     }
   );
 
@@ -102,7 +101,7 @@
       duration: 1.05,
       delay: 0.18,
       ease: "power3.out",
-      scrollTrigger: { trigger: ".collage", start: "top 80%", once: true },
+      scrollTrigger: { trigger: ".collage", start: "top 80%", toggleActions: "restart none none reverse" },
     }
   );
 
@@ -113,7 +112,7 @@
     delay: 0.45,
     ease: "back.out(1.8)",
     transformOrigin: "center",
-    scrollTrigger: { trigger: ".collage", start: "top 80%", once: true },
+    scrollTrigger: { trigger: ".collage", start: "top 80%", toggleActions: "restart none none reverse" },
   });
 
   reveal(".origin-card > *", { trigger: ".origin-card", stagger: 0.09, y: 24, duration: 0.8 });
@@ -128,7 +127,7 @@
     "--disk": 0.55,
     duration: 1.15,
     ease: "back.out(1.5)",
-    scrollTrigger: { trigger: ".gift-frame", start: "top 82%", once: true },
+    scrollTrigger: { trigger: ".gift-frame", start: "top 82%", toggleActions: "restart none none reverse" },
   });
 
   gsap.from(".gift-frame img", {
@@ -137,8 +136,7 @@
     duration: 1.05,
     ease: "power3.out",
     transformOrigin: "68% 60%",
-    clearProps: "scale",
-    scrollTrigger: { trigger: ".gift-frame", start: "top 82%", once: true },
+    scrollTrigger: { trigger: ".gift-frame", start: "top 82%", toggleActions: "restart none none reverse" },
   });
 
   reveal(".footer-row > *", { trigger: ".site-footer", start: "top 96%", stagger: 0.06, y: 16, duration: 0.6 });
@@ -157,7 +155,6 @@
     y: 22,
     duration: 0.65,
     scale: 0.97,
-    clearProps: "scale",
   });
   reveal(".pack-row figure", { trigger: ".pack-row", stagger: 0.08, y: 24 });
   reveal(".quote-form > *", { trigger: ".quote-form", stagger: 0.05, y: 18, duration: 0.55 });
