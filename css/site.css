@@ -1231,21 +1231,52 @@ button[type="submit"]:hover {
     width: 40%;
   }
 
+  .wave {
+    padding-top: 2.4rem;
+  }
+
+  .wave-photo.top {
+    position: relative;
+    z-index: 2;
+    transform: scaleY(2.7);
+    transform-origin: center bottom;
+  }
+
+  .wave-fill {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
   .wave-copy {
     grid-column: auto;
   }
 
+  .wave-grid {
+    order: 1;
+    z-index: 4;
+    padding-top: 1.35rem;
+    padding-bottom: 0.2rem;
+  }
+
   .hand {
+    order: 2;
     position: relative;
     left: auto;
     top: auto;
+    z-index: 3;
     display: block;
-    width: min(92%, 24rem);
-    margin: -1.2rem 0 0.2rem -8%;
+    width: min(112%, 30rem);
+    margin: 0.2rem 0 -0.35rem -10%;
   }
 
   .wave-arc {
-    margin-top: 1.2rem;
+    top: auto;
+    bottom: 6.4rem;
+    left: 0;
+    z-index: 1;
+    width: 190%;
+    margin-top: 0;
   }
 
   .origin {
