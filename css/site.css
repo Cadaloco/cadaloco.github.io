@@ -2612,9 +2612,13 @@ button[type="submit"]:hover {
     transition-delay: calc(var(--glyph, 0) * var(--step, 32ms));
   }
 
+  [data-animate] .hero-copy h1 .line {
+    letter-spacing: normal;
+  }
+
   [data-animate] .hero-copy h1 .glyph {
     --step: 34ms;
-    margin-right: -0.03em;
+    letter-spacing: -0.03em;
   }
 
   [data-animate] .hero-copy.is-in .glyph {
