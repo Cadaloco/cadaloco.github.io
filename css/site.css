@@ -2466,8 +2466,173 @@ button[type="submit"]:hover {
   }
 }
 
+.site-header .brand,
+.nav a,
+.hero-copy h1,
+.hero-copy p,
+.hero-copy .btn,
+.hero-photo {
+  animation: rise-in 0.85s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.site-header .brand {
+  animation-duration: 0.7s;
+}
+
+.nav a:nth-child(1) { animation-delay: 0.04s; }
+.nav a:nth-child(2) { animation-delay: 0.08s; }
+.nav a:nth-child(3) { animation-delay: 0.12s; }
+.nav a:nth-child(4) { animation-delay: 0.16s; }
+.nav a:nth-child(5) { animation-delay: 0.2s; }
+.nav a:nth-child(6) { animation-delay: 0.24s; }
+.nav a:nth-child(7) { animation-delay: 0.3s; }
+
+.hero-copy h1 {
+  animation-duration: 1.05s;
+  animation-delay: 0.08s;
+}
+
+.hero-copy p {
+  animation-duration: 0.8s;
+  animation-delay: 0.32s;
+}
+
+.hero-copy .btn {
+  animation-duration: 0.65s;
+  animation-delay: 0.5s;
+}
+
+.hero-photo {
+  animation-name: photo-settle;
+  animation-duration: 1.25s;
+  animation-delay: 0.12s;
+  transform-origin: 74% 100%;
+}
+
+.house-hero .eyebrow::after,
+.gifts-hero .eyebrow::after,
+.supply-hero .eyebrow::after,
+.meet-hero .eyebrow::after,
+.quote-hero .eyebrow::after {
+  transform-origin: left center;
+  animation: draw-rule 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
+}
+
+.btn,
+.arch-go,
+.line-go,
+.offer-go {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background 0.22s ease, color 0.22s ease;
+}
+
+.btn:hover,
+.offer-go:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.97, 1.04);
+  transition-duration: 0.08s;
+}
+
+.nav a:not(.btn):hover {
+  color: var(--rust);
+}
+
+.arch-go:hover,
+.line-go:hover {
+  transform: translateX(4px);
+  background: var(--rust);
+  color: #fff;
+}
+
+.orbit img,
+.offer img,
+.pack-row img,
+.made-grid img {
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+
+.orbit:hover img,
+.offer:hover img,
+.pack-row figure:hover img,
+.made-grid img:hover {
+  transform: scale(1.035);
+}
+
+.gift-frame {
+  --disk: 1;
+}
+
+.gift-frame::before {
+  scale: var(--disk);
+}
+
+.cherries.left {
+  transform-origin: 70% 10%;
+  animation: sway-left 6.8s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+.cherries.right {
+  transform-origin: 30% 10%;
+  animation: sway-right 7.4s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+.quote-branch {
+  transform-origin: 80% 0;
+  animation: sway-left 8s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.15rem);
+  }
+}
+
+@keyframes photo-settle {
+  from {
+    opacity: 0;
+    transform: translateY(1.4rem) scale(1.04);
+  }
+}
+
+@keyframes draw-rule {
+  from {
+    scale: 0 1;
+  }
+}
+
+@keyframes sway-left {
+  from { transform: rotate(-2.2deg); }
+  to { transform: rotate(2.4deg); }
+}
+
+@keyframes sway-right {
+  from { transform: scaleX(-1) rotate(-2.2deg); }
+  to { transform: scaleX(-1) rotate(2.4deg); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .site-header .brand,
+  .nav a,
+  .hero-copy h1,
+  .hero-copy p,
+  .hero-copy .btn,
+  .hero-photo,
+  .house-hero .eyebrow::after,
+  .gifts-hero .eyebrow::after,
+  .supply-hero .eyebrow::after,
+  .meet-hero .eyebrow::after,
+  .quote-hero .eyebrow::after,
+  .cherries.left,
+  .cherries.right,
+  .quote-branch {
+    animation: none;
   }
 }
