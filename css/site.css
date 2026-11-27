@@ -1280,16 +1280,23 @@ button[type="submit"]:hover {
   }
 
   .origin {
-    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4rem;
+  }
+
+  .origin-photo {
+    order: 2;
   }
 
   .origin-card {
+    order: 1;
     position: relative;
     top: auto;
     right: auto;
     width: auto;
-    margin: -1rem 0 1.6rem;
-    padding: 0.2rem 0 0;
+    margin: 0 0 0.35rem;
+    padding: 0.2rem var(--page) 0.15rem;
     transform: none;
     text-align: left;
   }
