@@ -1231,15 +1231,9 @@ button[type="submit"]:hover {
     width: 40%;
   }
 
-  .wave {
-    padding-top: 2.4rem;
-  }
-
   .wave-photo.top {
     position: relative;
     z-index: 2;
-    transform: scaleY(2.7);
-    transform-origin: center bottom;
   }
 
   .wave-fill {
@@ -1266,13 +1260,14 @@ button[type="submit"]:hover {
     top: auto;
     z-index: 3;
     display: block;
-    width: min(112%, 30rem);
-    margin: 0.2rem 0 -0.35rem -10%;
+    width: 136%;
+    max-width: none;
+    margin: 0.15rem 0 -4.2rem -36%;
   }
 
   .wave-arc {
     top: auto;
-    bottom: 6.4rem;
+    bottom: 8.6rem;
     left: 0;
     z-index: 1;
     width: 190%;
