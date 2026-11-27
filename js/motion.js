@@ -88,7 +88,49 @@
     });
   }
 
-  copyBlock(document.querySelector(".hero-copy"), ":scope > p, :scope > .btn", false, 8);
+  function fillGlyphs(el, text, index) {
+    el.textContent = "";
+    const frag = document.createDocumentFragment();
+    const words = text.split(" ");
+    words.forEach((word, wordIndex) => {
+      const hold = document.createElement("span");
+      hold.className = "word";
+      hold.setAttribute("aria-hidden", "true");
+      [...word].forEach((ch) => {
+        const span = document.createElement("span");
+        span.className = "glyph";
+        span.textContent = ch;
+        span.style.setProperty("--glyph", String(index));
+        index += 1;
+        hold.appendChild(span);
+      });
+      frag.appendChild(hold);
+      if (wordIndex < words.length - 1) frag.appendChild(document.createTextNode(" "));
+    });
+    el.appendChild(frag);
+    return index;
+  }
+
+  const heroCopy = document.querySelector(".hero-copy");
+  if (heroCopy) {
+    const title = heroCopy.querySelector("h1");
+    const lead = heroCopy.querySelector("p");
+    if (title) {
+      const lines = [...title.querySelectorAll(".line")];
+      title.setAttribute("aria-label", lines.map((line) => line.textContent.trim()).join(" "));
+      let index = 0;
+      lines.forEach((line) => {
+        index = fillGlyphs(line, line.textContent.trim(), index);
+      });
+    }
+    if (lead) {
+      const label = lead.textContent.replace(/\s+/g, " ").trim();
+      lead.setAttribute("aria-label", label);
+      fillGlyphs(lead, label, 16);
+    }
+    heroCopy.classList.add("motion-copy");
+    play(heroCopy, "is-in");
+  }
   const hero = document.querySelector(".home-hero");
   if (hero) play(hero, "is-in");
   copyBlock(document.querySelector(".port-head"), ":scope > div > *, :scope > .port-copy");
