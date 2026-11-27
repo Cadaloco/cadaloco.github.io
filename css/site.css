@@ -1107,8 +1107,23 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 980px) {
+  body {
+    overflow-x: clip;
+  }
+
   .nav-toggle {
     display: inline-flex;
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    background: var(--paper);
+  }
+
+  .nav-rule {
+    display: none;
+  }
+
+  .home .site-header:has(.nav.is-open) {
+    background: var(--paper);
   }
 
   .nav {
@@ -1124,8 +1139,16 @@ button[type="submit"]:hover {
     background: var(--paper);
   }
 
+  .site-header {
+    flex-wrap: wrap;
+  }
+
   .nav.is-open {
     display: flex;
+    position: static;
+    width: 100%;
+    padding-top: 0.7rem;
+    padding-bottom: 1.1rem;
   }
 
   .nav a {
@@ -1160,7 +1183,7 @@ button[type="submit"]:hover {
 
   .home-hero {
     margin-top: 0;
-    padding: 3.4rem 0 2.8rem;
+    padding: 1.3rem 0 1.4rem;
     pointer-events: auto;
   }
 
@@ -1179,8 +1202,9 @@ button[type="submit"]:hover {
   }
 
   .hero-photo {
-    width: 100%;
-    margin: 0.4rem 0 0;
+    width: calc(100% + var(--page) * 2);
+    max-width: none;
+    margin: 0.7rem calc(var(--page) * -1) 0;
   }
 
   .hero-copy .btn {
@@ -1233,8 +1257,46 @@ button[type="submit"]:hover {
     top: auto;
     right: auto;
     width: auto;
-    margin: -3.5rem var(--page) 1.5rem;
+    margin: 0.2rem 0 1.6rem;
+    padding: 0.2rem 0 0;
     transform: none;
+    text-align: left;
+  }
+
+  .origin-card .eyebrow {
+    justify-content: flex-start;
+  }
+
+  .origin-card h2,
+  .origin-card p {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .origin-card::before {
+    content: none;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 0.35rem 0.9rem;
+    padding: 0;
+    border: 0;
+  }
+
+  .site-footer {
+    padding: 1.4rem 0 5.4rem;
+  }
+
+  .site-footer .wrap {
+    padding-right: 0;
   }
 
   .regalos-home .wrap {
