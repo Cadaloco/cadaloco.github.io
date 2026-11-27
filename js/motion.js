@@ -18,10 +18,14 @@
 
   const view = { rootMargin: "0px 0px -6% 0px", threshold: [0, 0.08, 0.15, 0.28, 0.45, 0.6, 0.75, 0.9, 1] };
 
-  function attach(el, show, hide, openNow) {
+  function attach(el, show, hide, openNow, keep) {
     let open = openNow;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        if (keep) {
+          if (entry.isIntersecting) show();
+          return;
+        }
         const up = scrollDir() === "up";
         const box = entry.boundingClientRect;
         const vh = window.innerHeight;
@@ -41,23 +45,23 @@
         }
         if (open && !up && entry.intersectionRatio >= 0.12) show();
       });
-    }, view);
+    }, keep ? { threshold: [0, 0.01, 1] } : view);
     observer.observe(el);
     return () => {
       open = true;
     };
   }
 
-  function play(el, className) {
+  function play(el, className, keep) {
     const show = () => el.classList.add(className);
     const hide = () => el.classList.remove(className);
     const rect = el.getBoundingClientRect();
     const onScreen = rect.top < window.innerHeight * 0.86 && rect.bottom > 0;
     if (!onScreen) {
-      attach(el, show, hide, true);
+      attach(el, show, hide, true, keep);
       return;
     }
-    const release = attach(el, show, hide, false);
+    const release = attach(el, show, hide, false, keep);
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         show();
@@ -66,7 +70,7 @@
     });
   }
 
-  function copyBlock(el, selector) {
+  function copyBlock(el, selector, keep) {
     if (!el) return;
     el.classList.add("motion-copy");
     const nodes = selector ? [...el.querySelectorAll(selector)] : [...el.children];
@@ -74,7 +78,7 @@
       node.classList.add("rise");
       node.style.setProperty("--rise-i", String(index));
     });
-    play(el, "is-in");
+    play(el, "is-in", keep);
   }
 
   function each(selector) {
@@ -95,7 +99,7 @@
   copyBlock(document.querySelector(".origin-card"));
   copyBlock(document.querySelector(".regalos-home .wrap > div:first-child"));
   each(".gift-frame");
-  copyBlock(document.querySelector(".footer-row"));
+  copyBlock(document.querySelector(".footer-row"), null, true);
   copyBlock(document.querySelector(".house-top > div:first-child"));
   each(".house-still img");
   copyBlock(document.querySelector(".gifts-hero .wrap"));
