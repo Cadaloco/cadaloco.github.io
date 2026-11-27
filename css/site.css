@@ -2697,6 +2697,29 @@ button[type="submit"]:hover {
     scale: 1;
   }
 
+  [data-animate] .wave-arc {
+    opacity: 0;
+    translate: -1.4rem 0;
+    transition:
+      opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      translate 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  [data-animate] .hand {
+    opacity: 0;
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.18s;
+  }
+
+  [data-animate] .wave:has(.wave-copy.is-in) .wave-arc {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  [data-animate] .wave:has(.wave-copy.is-in) .hand {
+    opacity: 1;
+  }
+
   [data-animate] .rise,
   [data-animate] :is(
     .orbit,
