@@ -1168,6 +1168,15 @@ button[type="submit"]:hover {
     width: auto;
   }
 
+  .port-copy {
+    margin-top: 1rem;
+    padding-left: 0;
+  }
+
+  .port-copy::before {
+    content: none;
+  }
+
   .hero-grid,
   .port-head,
   .wave-grid,
