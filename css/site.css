@@ -2095,41 +2095,15 @@ button[type="submit"]:hover {
 
 .house-still {
   position: relative;
-  height: 22.5rem;
-}
-
-.house-sun,
-.house-disk {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.house-sun {
-  top: -0.6rem;
-  left: 6%;
-  width: 16.8rem;
-  height: 16.8rem;
-  background: #f0b429;
-}
-
-.house-disk {
-  top: 6.4rem;
-  left: 0;
-  width: 8.6rem;
-  height: 8.6rem;
-  background: #6a341c;
+  height: 24rem;
 }
 
 .house-still img {
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  bottom: 0;
-  width: 58%;
-  height: 94%;
-  object-fit: cover;
-  object-position: 62% 38%;
-  border-radius: 1.15rem 1.15rem 0.4rem 0.4rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 .pretext {
@@ -2139,7 +2113,7 @@ button[type="submit"]:hover {
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 0.85rem 1.45rem;
   align-items: center;
-  margin-top: -1.35rem;
+  margin-top: 0.4rem;
   padding: 1.15rem 1.35rem;
   border: 1px solid rgba(43, 23, 16, 0.12);
   border-radius: 1.2rem;
