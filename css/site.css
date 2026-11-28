@@ -2046,25 +2046,8 @@ button[type="submit"]:hover {
 .gifts-close {
   position: relative;
   margin-top: 1.4rem;
-  padding: 1.2rem 0 4.4rem;
+  padding: 1.2rem 0 1.6rem;
   text-align: center;
-}
-
-.cherries {
-  position: absolute;
-  bottom: 0;
-  width: 9rem;
-  height: auto;
-  pointer-events: none;
-}
-
-.cherries.left {
-  left: 0;
-}
-
-.cherries.right {
-  right: 0;
-  transform: scaleX(-1);
 }
 
 @media (max-width: 980px) {
@@ -2746,16 +2729,6 @@ button[type="submit"]:hover {
   scale: var(--disk);
 }
 
-.cherries.left {
-  transform-origin: 70% 10%;
-  animation: sway-left 6.8s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
-}
-
-.cherries.right {
-  transform-origin: 30% 10%;
-  animation: sway-right 7.4s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
-}
-
 .quote-branch {
   transform-origin: 80% 0;
   animation: sway-left 8s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
@@ -2771,11 +2744,6 @@ button[type="submit"]:hover {
 @keyframes sway-left {
   from { transform: rotate(-2.2deg); }
   to { transform: rotate(2.4deg); }
-}
-
-@keyframes sway-right {
-  from { transform: scaleX(-1) rotate(-2.2deg); }
-  to { transform: scaleX(-1) rotate(2.4deg); }
 }
 
 @property --disk {
@@ -3039,8 +3007,6 @@ button[type="submit"]:hover {
   .hero-copy p,
   .hero-copy .btn,
   .hero-photo,
-  .cherries.left,
-  .cherries.right,
   .quote-branch {
     animation: none;
   }
